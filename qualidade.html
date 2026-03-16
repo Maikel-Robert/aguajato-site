@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qualidade da Água | Aguajato – Controle Sanitário Campinas</title>
+    <link rel="icon" type="image/png" href="img/logo-aguajato.png">
+
+    <meta name="description"
+        content="Conheça o rigoroso controle de qualidade da água potável da Aguajato. Análises laboratoriais mensais, conformidade com Portaria 888 e frota higienizada periodicamente.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="js/main.js" defer></script>
+    <style>
+        .process-steps {
+            display: grid;
+            gap: 1.5rem;
+            counter-reset: steps;
+        }
+
+        .process-step {
+            background: #fff;
+            border: 1px solid var(--slate-200);
+            border-radius: var(--radius);
+            padding: 1.75rem;
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+            position: relative;
+            counter-increment: steps;
+        }
+
+        .step-num {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            background: var(--brand);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 1rem;
+        }
+
+        .step-body h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--slate-900);
+            margin-bottom: .35rem;
+        }
+
+        .step-body p {
+            font-size: .875rem;
+            color: var(--slate-500);
+            line-height: 1.6;
+        }
+
+        @media (min-width: 900px) {
+            .process-steps {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="breadcrumb">
+            <div class="container">
+                <nav class="breadcrumb-nav">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        <polyline points="9 22 9 12 15 12 15 22" />
+                    </svg>
+                    <a href="index.html">Home</a> / <span>Qualidade</span>
+                </nav>
+            </div>
+        </div>
+
+        <section class="page-hero">
+            <div class="container">
+                <h1>Controle de <span>Qualidade</span></h1>
+                <p>A água que entregamos é a mesma que você escolheria para beber. Comprovado em laboratório.</p>
+            </div>
+        </section>
+
+        <!-- Certificações -->
+        <section class="section-sm" style="background:#fff; border-bottom:1px solid var(--slate-200);">
+            <div class="container">
+                <div class="grid-3">
+                    <div class="card" style="border-left:4px solid var(--brand); padding:1.5rem;">
+                        <strong style="font-size:.85rem; color:var(--slate-900); display:block; margin-bottom:.3rem;">🧪
+                            Portaria 888</strong>
+                        <p style="font-size:.8rem; color:var(--slate-500);">Todos os parâmetros físico-químicos e
+                            bacteriológicos seguem a legislação federal de potabilidade.</p>
+                    </div>
+                    <div class="card" style="border-left:4px solid var(--green); padding:1.5rem;">
+                        <strong style="font-size:.85rem; color:var(--slate-900); display:block; margin-bottom:.3rem;">🏭
+                            CETESB</strong>
+                        <p style="font-size:.8rem; color:var(--slate-500);">Operação autorizada pela Companhia Ambiental
+                            do Estado de São Paulo. Licença sempre em dia.</p>
+                    </div>
+                    <div class="card" style="border-left:4px solid #7c3aed; padding:1.5rem;">
+                        <strong style="font-size:.85rem; color:var(--slate-900); display:block; margin-bottom:.3rem;">🔬
+                            Laboratório Independente</strong>
+                        <p style="font-size:.8rem; color:var(--slate-500);">Análises realizadas por laboratório terceiro
+                            credenciado, garantindo total imparcialidade nos resultados.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Processo -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Processo Contínuo</span>
+                    <h2 class="section-title">Como garantimos a qualidade em cada entrega</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-num">1</div>
+                        <div class="step-body">
+                            <h3>Captação em Fonte Certificada</h3>
+                            <p>A água é captada exclusivamente de fontes autorizadas pelos órgãos ambientais competentes
+                                do Estado de São Paulo.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">2</div>
+                        <div class="step-body">
+                            <h3>Tratamento e Filtração</h3>
+                            <p>Antes do armazenamento, a água passa por processo de filtração e cloração conforme as
+                                normas sanitárias vigentes.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">3</div>
+                        <div class="step-body">
+                            <h3>Análise Laboratorial Mensal</h3>
+                            <p>Amostras são enviadas mensalmente ao laboratório independente para análise bacteriológica
+                                e físico-química completa.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">4</div>
+                        <div class="step-body">
+                            <h3>Higienização dos Caminhões</h3>
+                            <p>Os tanques dos caminhões são higienizados periodicamente com produtos aprovados pela
+                                ANVISA, garantindo água sem contaminação no transporte.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">5</div>
+                        <div class="step-body">
+                            <h3>Rastreabilidade da Entrega</h3>
+                            <p>Cada entrega é documentada com registro de origem, data, volume e responsável. Total
+                                transparência do início ao fim.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-num">6</div>
+                        <div class="step-body">
+                            <h3>Laudos Públicos e Acessíveis</h3>
+                            <p>Todos os laudos aprovados são disponibilizados online para que qualquer cliente possa
+                                verificar a qualidade da água que recebe.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA laudos -->
+        <section class="cta-band">
+            <div class="container">
+                <h2>Confira os laudos de qualidade</h2>
+                <p>Acesse os relatórios completos emitidos pelo laboratório independente credenciado. Transparência é o
+                    nosso compromisso.</p>
+                <div class="cta-actions">
+                    <a href="laudos.html" class="btn btn-primary btn-lg">Ver Laudos de Análise</a>
+                    <a href="contato.html" class="btn btn-outline"
+                        style="color:#fff; border-color:rgba(255,255,255,.5);">Falar com a Equipe</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>

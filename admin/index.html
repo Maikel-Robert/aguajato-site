@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin – Login | Painel de Laudos Aguajato</title>
+    <link rel="icon" type="image/png" href="../img/logo-aguajato.png">
+
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #0c2340 50%, #0a3055 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 1rem;
+            padding: 2.5rem 2rem;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, .35);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            margin-bottom: 2rem;
+            justify-content: center;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: #0284c7;
+            color: #fff;
+            border-radius: .6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .logo-text span:first-child {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: -.02em;
+        }
+
+        .logo-text span:last-child {
+            display: block;
+            font-size: .65rem;
+            font-weight: 700;
+            color: #0284c7;
+            text-transform: uppercase;
+            letter-spacing: .12em;
+        }
+
+        h1 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: .35rem;
+        }
+
+        p {
+            font-size: .85rem;
+            color: #64748b;
+            margin-bottom: 1.75rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.1rem;
+        }
+
+        label {
+            display: block;
+            font-size: .82rem;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: .35rem;
+        }
+
+        input {
+            width: 100%;
+            padding: .75rem 1rem;
+            border: 1.5px solid #e2e8f0;
+            border-radius: .5rem;
+            font-family: inherit;
+            font-size: .9rem;
+            color: #1e293b;
+            transition: border-color .2s, box-shadow .2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #0284c7;
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, .15);
+        }
+
+        .btn {
+            width: 100%;
+            padding: .9rem 1.5rem;
+            background: #0284c7;
+            color: #fff;
+            border: none;
+            border-radius: .5rem;
+            font-family: inherit;
+            font-size: .95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all .25s;
+            margin-top: .5rem;
+        }
+
+        .btn:hover {
+            background: #0369a1;
+            transform: translateY(-1px);
+        }
+
+        .error {
+            background: #fee2e2;
+            color: #b91c1c;
+            border-radius: .5rem;
+            padding: .75rem 1rem;
+            font-size: .85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: .82rem;
+            color: #94a3b8;
+        }
+
+        .back-link a {
+            color: #0284c7;
+            text-decoration: none;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        .shield {
+            text-align: center;
+            margin-top: 1.25rem;
+            font-size: .72rem;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .3rem;
+        }
+
+        .shield svg {
+            width: 12px;
+            height: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="logo">
+            <div class="logo-icon">A</div>
+            <div class="logo-text">
+                <span>AGUAJATO</span>
+                <span>Painel Admin</span>
+            </div>
+        </div>
+
+        <h1>Acesso Restrito</h1>
+        <p>Área exclusiva para gerenciamento de laudos de qualidade da água.</p>
+
+        <div class="error" id="error-msg">Usuário ou senha incorretos.</div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label for="user">Usuário</label>
+                <input type="text" id="user" name="user" placeholder="admin" autocomplete="username" required>
+            </div>
+            <div class="form-group">
+                <label for="pass">Senha</label>
+                <input type="password" id="pass" name="pass" placeholder="••••••••" autocomplete="current-password"
+                    required>
+            </div>
+            <button type="submit" class="btn">Entrar no Painel</button>
+        </form>
+
+        <p class="back-link"><a href="../index.html">← Voltar ao site</a></p>
+
+        <div class="shield">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            Conexão segura · Área protegida
+        </div>
+    </div>
+
+    <script>
+        // Credenciais (altere aqui para maior segurança)
+        const CREDENTIALS = { user: 'aguajato', pass: 'agua@2025' };
+
+        // Redireciona se já logado
+        if (sessionStorage.getItem('admin_logged') === 'true') {
+            window.location.href = 'dashboard.html';
+        }
+
+        document.getElementById('login-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const u = document.getElementById('user').value.trim();
+            const p = document.getElementById('pass').value;
+            const err = document.getElementById('error-msg');
+            if (u === CREDENTIALS.user && p === CREDENTIALS.pass) {
+                sessionStorage.setItem('admin_logged', 'true');
+                window.location.href = 'dashboard.html';
+            } else {
+                err.style.display = 'block';
+                document.getElementById('pass').value = '';
+                document.getElementById('pass').focus();
+            }
+        });
+    </script>
+</body>
+
+</html>
